@@ -18,14 +18,11 @@ RUN apt-get install -y \
   cmake \
   git
 
-# Set python3.9 as default python3
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
-
-# Clone sources
+# Clone sources from release branch
 RUN git clone --recursive --branch 0.2 https://github.com/VCityTeam/pySunlight.git
 WORKDIR /pySunlight
 
-# Create and enable virutal environment
+# Create and enable virtual environment
 RUN python3.9 -m venv venv
 RUN . venv/bin/activate
 RUN pip install -e .
