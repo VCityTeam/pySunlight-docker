@@ -1,0 +1,13 @@
+version: '1.0'
+services:
+  pysunlight:
+    build:
+      context: "./Context"
+    hostname: pysunlight
+    environment:
+      - PYSUNLIGHT_START_DATE:${PYSUNLIGHT_START_DATE}
+      - PYSUNLIGHT_END_DATE:${PYSUNLIGHT_END_DATE}
+      - PYSUNLIGHT_LOG_LEVEL:${PYSUNLIGHT_LOG_LEVEL}
+    volumes:
+      - ./inputs/:/inputs
+      - ./outputs/:/outputs

@@ -19,7 +19,7 @@ RUN apt-get install -y \
   git
 
 # Clone sources from release branch
-RUN git clone --recursive --branch 0.2 https://github.com/VCityTeam/pySunlight.git
+RUN git clone --recursive --branch 0.3 https://github.com/VCityTeam/pySunlight.git
 WORKDIR /pySunlight
 
 # Create and enable virtual environment
@@ -27,7 +27,10 @@ RUN python3.9 -m venv venv
 RUN . venv/bin/activate
 RUN pip install -e .
 
-EXPOSE 3000
+# Define computation arguments
+ENV PYSUNLIGHT_START_DATE=403224
+ENV PYSUNLIGHT_END_DATE=403248
+ENV PYSUNLIGHT_LOG_LEVEL="DEBUG"
 
 # Start the app using serve command
-CMD [ "python3.9", "src/Test_WrapperImport.py" ]
+CMD [ "sh", "-c", "python3.9 src/main.py -i /inputs -o /outputs -s ${PYSUNLIGHT_START_DATE} -e ${PYSUNLIGHT_END_DATE} -log ${PYSUNLIGHT_LOG_LEVEL}"]
