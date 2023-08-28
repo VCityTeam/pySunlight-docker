@@ -9,5 +9,5 @@ services:
       - PYSUNLIGHT_END_DATE:${PYSUNLIGHT_END_DATE}
       - PYSUNLIGHT_LOG_LEVEL:${PYSUNLIGHT_LOG_LEVEL}
     volumes:
-      - ./inputs/:/inputs
-      - ./outputs/:/outputs
+      - ${PYSUNLIGHT_INPUTS_FOLDER}:/inputs
+      - ${PYSUNLIGHT_OUTPUTS_FOLDER}:/outputs

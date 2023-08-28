@@ -19,7 +19,7 @@ RUN apt-get install -y \
   git
 
 # Clone sources from release branch
-RUN git clone --recursive --branch 0.3 https://github.com/VCityTeam/pySunlight.git
+RUN git clone --recursive --branch 0.3.1 https://github.com/VCityTeam/pySunlight.git
 WORKDIR /pySunlight
 
 # Create and enable virtual environment
