@@ -2,7 +2,14 @@
 
 # About The Project
 
-It's a dockerised version of [pySunlight](https://github.com/VCityTeam/pySunlight) program.
+It's a dockerised version of [pySunlight](https://github.com/VCityTeam/pySunlight) program.  
+
+pySunlight-docker is one repository of the Sunlight project, including :
+
+- [Sunlight](https://github.com/VCityTeam/Sunlight)
+- [pySunlight](https://github.com/VCityTeam/pySunlight)
+- [pySunlight-docker](https://github.com/VCityTeam/pySunlight-docker)
+- [UD-Demo-VCity-Sunlight](https://github.com/VCityTeam/UD-Demo-VCity-Sunlight)
 
 # Getting Started
 
