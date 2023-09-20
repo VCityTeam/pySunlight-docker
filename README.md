@@ -1,6 +1,6 @@
 # pySunlight Docker
 
-# About The Project
+## About The Project
 
 It's a dockerised version of [pySunlight](https://github.com/VCityTeam/pySunlight) program.  
 
@@ -11,9 +11,9 @@ pySunlight-docker is one repository of the Sunlight project, including :
 - [pySunlight-docker](https://github.com/VCityTeam/pySunlight-docker)
 - [UD-Demo-VCity-Sunlight](https://github.com/VCityTeam/UD-Demo-VCity-Sunlight)
 
-# Getting Started
+## Getting Started
 
-## Install
+### Install
 
 Clone the repository.
 
@@ -21,15 +21,13 @@ Clone the repository.
 git clone https://github.com/VCityTeam/pySunlight-docker.git
 ```
 
-## Usage
+### Usage
 
-### Configure
+#### Configure
 
 1. Copy and rename .env.example to . env.
 
-2. Adapt the configuration to your needs.
-
-Here is a full list of all options available :
+2. Adapt the configuration to your needs. Here is a full list of all options available :
 | Arguments             | Description                                                                                                           | Example                                |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | START_DATE            | Start date of sunlight computation                                                                                    | 403224                                 |
@@ -41,44 +39,36 @@ Here is a full list of all options available :
 
 3. Create two folders named `inputs` and `outputs`. Place your 3DTiles in the inputs folder (it can be in a subfolder).
 
-### With Docker Compose
+#### With Docker Compose
 
-#### Build
+1. Build pySunlight docker-compose :
 
-To build pySunlight docker :
+   ```bash
+   docker compose build
+   ```
 
-```bash
-docker compose build
-```
+2. Run the container with :
 
-#### Run
+   ```bash
+   docker compose up
+   ```
 
-Run the container with :
+#### With DockerFile
 
-```bash
-docker compose up
-```
+1. Build dpySunlight DockerFile :
 
-### With DockerFile
+   ```bash
+   docker build -t pysunlight --file Context/Dockerfile .
+   ```
 
-#### Build
+2. Run dockerfile with .env file :
 
-Build the DockerFile :
-
-```bash
-docker build -t pysunlight --file Context/Dockerfile .
-```
-
-#### Run
-
-Run dockerfile with .env file :
-
-```bash
-docker run -v ./inputs:/inputs -v ./outputs:/outputs --env-file .env pysunlight
-```
+   ```bash
+   docker run -v ./inputs:/inputs -v ./outputs:/outputs --env-file .env pysunlight
+   ```
 
 or run docker file with arguments :
 
-```bash
-docker run -v ./inputs:/inputs -v ./outputs:/outputs -e START_DATE=403224 -e END_DATE=403248 -e LOG_LEVEL=DEBUG -e OPTIONAL_ARGS=--with-aggregate pysunlight
-```
+   ```bash
+   docker run -v ./inputs:/inputs -v ./outputs:/outputs -e START_DATE=403224 -e END_DATE=403248 -e LOG_LEVEL=DEBUG -e OPTIONAL_ARGS=--with-aggregate pysunlight
+   ```
