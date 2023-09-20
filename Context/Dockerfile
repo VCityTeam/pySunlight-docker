@@ -27,10 +27,6 @@ WORKDIR /pySunlight
 RUN pip install -e .
 
 # Env values are converted in argument to set default parameters on build
-ARG START_DATE
-ARG END_DATE
-ARG LOG_LEVEL
-
 ENV START_DATE=${START_DATE}
 ENV END_DATE=${END_DATE}
 ENV LOG_LEVEL=${LOG_LEVEL}
