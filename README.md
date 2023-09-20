@@ -81,7 +81,7 @@ git clone https://github.com/VCityTeam/pySunlight-docker.git
    docker run -v ./inputs:/inputs -v ./outputs:/outputs --env-file .env pysunlight
    ```
 
-or run docker file with arguments :
+   or run docker file with arguments :
 
    ```bash
    docker run -v ./inputs:/inputs -v ./outputs:/outputs -e START_DATE=403224 -e END_DATE=403248 -e LOG_LEVEL=DEBUG -e OPTIONAL_ARGS=--with-aggregate pysunlight
