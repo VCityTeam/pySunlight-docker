@@ -37,6 +37,7 @@ Here is a full list of all options available :
 | LOG_LEVEL             | Provide logging level depending on [logging module](https://docs.python.org/3/howto/logging.html#when-to-use-logging) | DEBUG, INFO, WARNING, ERROR, CRITICAL  |
 | INPUTS_FOLDER         | Inputs folder containing 3D Tiles use for sunlight computation                                                        | ./inputs                               |
 | OUTPUTS_FOLDER        | Outputs folder containing 3D Tiles with Sunlight Result in batch table                                                | ./outputs                              |
+| OPTIONAL_ARGS         | Optional arguments (compute aggregate...)                                                                             | --with-aggregate                       |
 
 3. Create two folders named `inputs` and `outputs`. Place your 3DTiles in the inputs folder (it can be in a subfolder).
 
@@ -79,5 +80,5 @@ docker run -v ./inputs:/inputs -v ./outputs:/outputs --env-file .env pysunlight
 or run docker file with arguments :
 
 ```bash
-docker run -v ./inputs:/inputs -v ./outputs:/outputs -e START_DATE=403224 -e END_DATE=403248 -e LOG_LEVEL=DEBUG  pysunlight
+docker run -v ./inputs:/inputs -v ./outputs:/outputs -e START_DATE=403224 -e END_DATE=403248 -e LOG_LEVEL=DEBUG -e OPTIONAL_ARGS=--with-aggregate pysunlight
 ```

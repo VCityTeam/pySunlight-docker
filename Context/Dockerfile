@@ -30,6 +30,7 @@ RUN pip install -e .
 ENV START_DATE=${START_DATE}
 ENV END_DATE=${END_DATE}
 ENV LOG_LEVEL=${LOG_LEVEL}
+ENV OPTIONAL_ARGS=${OPTIONAL_ARGS}
 
 # Start the app using serve command
-CMD [ "sh", "-c", "python3.9 src/main.py -i /inputs -o /outputs -s ${START_DATE} -e ${END_DATE} -log ${LOG_LEVEL}"]
+CMD [ "sh", "-c", "python3.9 src/main.py -i /inputs -o /outputs -s ${START_DATE} -e ${END_DATE} -log ${LOG_LEVEL} ${OPTIONAL_ARGS}"]
