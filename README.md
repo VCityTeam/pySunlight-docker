@@ -1,5 +1,18 @@
 # pySunlight Docker
 
+<!-- TOC -->
+
+- [pySunlight Docker](#pysunlight-docker)
+  - [About The Project](#about-the-project)
+  - [Getting Started](#getting-started)
+    - [Install](#install)
+    - [Usage](#usage)
+      - [Configure](#configure)
+      - [With Docker Compose](#with-docker-compose)
+      - [With DockerFile](#with-dockerfile)
+
+<!-- /TOC -->
+
 ## About The Project
 
 It's a dockerised version of [pySunlight](https://github.com/VCityTeam/pySunlight) program.  
@@ -27,7 +40,8 @@ git clone https://github.com/VCityTeam/pySunlight-docker.git
 
 1. Copy and rename .env.example to . env.
 
-2. Adapt the configuration to your needs. Here is a full list of all options available :
+2. Adapt the configuration to your needs. Here is a full list of all options available :^
+
 | Arguments             | Description                                                                                                           | Example                                |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | START_DATE            | Start date of sunlight computation                                                                                    | 403224                                 |
