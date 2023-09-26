@@ -69,7 +69,7 @@ git clone https://github.com/VCityTeam/pySunlight-docker.git
 
 #### With DockerFile
 
-1. Build dpySunlight DockerFile :
+1. Build pySunlight DockerFile :
 
    ```bash
    docker build -t pysunlight --file Context/Dockerfile .
