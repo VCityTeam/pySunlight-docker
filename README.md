@@ -40,7 +40,7 @@ git clone https://github.com/VCityTeam/pySunlight-docker.git
 
 1. Copy and rename .env.example to . env.
 
-2. Adapt the configuration to your needs. Here is a full list of all options available :^
+2. Adapt the configuration to your needs. Here is a full list of all options available :
 
 | Arguments             | Description                                                                                                           | Example                                |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
