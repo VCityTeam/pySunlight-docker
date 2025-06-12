@@ -20,11 +20,12 @@ RUN apt-get install -y \
   git
 
 # Clone sources from release branch
-RUN git clone --recursive --branch 0.4 https://github.com/VCityTeam/pySunlight.git
+RUN git clone --recursive https://github.com/VCityTeam/pySunlight.git
 WORKDIR /pySunlight
 
 # Install requirements
 RUN pip install -e .
+RUN pip install --force-reinstall numpy==1.21.0
 
 # Env values are converted in argument to set default parameters on build
 ENV START_DATE=${START_DATE}
