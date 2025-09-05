@@ -46,6 +46,7 @@ git clone https://github.com/VCityTeam/pySunlight-docker.git
 | --------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | START_DATE            | Start date of sunlight computation                                                                                    | 403224                                 |
 | END_DATE              | End date of sunlight computation                                                                                      | 403248                                 |
+| TIMESTAMP | ISO Timestamp at wich to calculate sunlight (Only if START_DATE is not defined) | 2020-05-05T12:00 |
 | LOG_LEVEL             | Provide logging level depending on [logging module](https://docs.python.org/3/howto/logging.html#when-to-use-logging) | DEBUG, INFO, WARNING, ERROR, CRITICAL  |
 | INPUTS_FOLDER         | Inputs folder containing 3D Tiles use for sunlight computation                                                        | ./inputs                               |
 | OUTPUTS_FOLDER        | Outputs folder containing 3D Tiles with Sunlight Result in batch table                                                | ./outputs                              |
