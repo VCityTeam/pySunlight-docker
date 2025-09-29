@@ -20,7 +20,7 @@ RUN apt-get install -y \
   git
 
 # Clone sources from release branch
-RUN git clone --recursive --branch 0.4 https://github.com/VCityTeam/pySunlight.git
+RUN git clone --recursive https://github.com/VCityTeam/pySunlight.git
 WORKDIR /pySunlight
 
 # Install requirements
@@ -29,8 +29,13 @@ RUN pip install -e .
 # Env values are converted in argument to set default parameters on build
 ENV START_DATE=${START_DATE}
 ENV END_DATE=${END_DATE}
+ENV TIMESTAMP=${TIMESTAMP}
 ENV LOG_LEVEL=${LOG_LEVEL}
+ENV FORMAT=${FORMAT}
 ENV OPTIONAL_ARGS=${OPTIONAL_ARGS}
 
-# Start the app using serve command
-CMD [ "sh", "-c", "python3.9 src/main.py -i /inputs -o /outputs -s ${START_DATE} -e ${END_DATE} -log ${LOG_LEVEL} ${OPTIONAL_ARGS}"]
+COPY entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
