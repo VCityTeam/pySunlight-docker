@@ -70,7 +70,7 @@ The input folder should be constructed as such :
 Explanation for START_DATE and END_DATE :
    They are a deprecated time format, that was introduced in 3DUSE. The time is represented in Hours since 1975-01-01T00:00, so 403224 translates to 2016-01-01T00:00 in ISO time format. It is recommended that you use *TIMESTAMP* as the format is standardised and human readable.
 
-The format is CSV by defaul and should be left as is, the 3DTIles export is *broken and deprecated*.
+The format is CSV by default and should be left as is, the 3DTIles export is *broken and deprecated*.
 
 #### Windows specific prerequisite
 
